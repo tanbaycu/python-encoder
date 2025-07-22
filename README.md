@@ -5,5 +5,5 @@
 Chúc bạn bảo vệ code thành công – và nếu bạn là "copycat", hãy nhớ: sáng tạo luôn vui hơn là chỉ copy!
 
 ---
-
+**Tài liệu** [Documention](https://tanbaycu.github.io/python-encoder)
 **Tác giả:** [tanbaycu](https://tanbaycu.is-a.dev) 

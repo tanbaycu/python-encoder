@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Encoder Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Geist', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --accent-color: #ffffff;
+        }
+        
+        .light {
+            --bg-primary: #ffffff;
+            --text-primary: #000000;
+            --text-secondary: #666666;
+            --accent-color: #000000;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            font-family: 'Geist', system-ui, sans-serif;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 100;
+        }
+        
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            line-height: 1.8;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .cta-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            margin: 2rem 1rem 2rem 0;
+            transition: all 0.2s ease;
+        }
+        
+        .cta-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .cta-link-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--text-secondary);
+        }
+        
+        .cta-link-secondary:hover {
+            border-color: var(--accent-color);
+        }
+        
+        .author-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .author-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .cta-link {
+                display: block;
+                text-align: center;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="h-full">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <i data-lucide="sun" class="w-5 h-5" id="themeIcon"></i>
+    </button>
+    
+    <div class="content">
+        <h1>Python Code Encoder Pro</h1>
+        
+        <p>Bảo vệ code của bạn khỏi những kẻ ăn cắp không biết xấu hổ.</p>
+        
+        <p>Một công cụ mã hóa Python được sinh ra từ sự bức xúc với những kẻ copy-paste code mà không hề đóng góp gì, rồi còn tự nhận là của mình. Giờ đây, hãy để họ thử "ăn cắp" code đã được mã hóa xem!</p>
+        
+        <a href="https://encoder-python.vercel.app" class="cta-link">Bắt đầu mã hóa</a>
+        <a href="https://github.com/tanbaycu" class="cta-link cta-link-secondary" target="_blank">GitHub</a>
+        
+        <h2>Tại sao công cụ này ra đời?</h2>
+        
+        <p>Trong cộng đồng lập trình, chúng ta thường gặp những cá nhân có thói quen <span class="highlight">"mượn" code của người khác mà không hề để lại một dòng credit nào</span>. Tệ hơn nữa, họ còn tự nhận là tác giả và bán lại như sản phẩm của mình.</p>
+        
+        <p class="quote">"Nếu bạn muốn copy code của tôi, ít nhất hãy thử hiểu nó trước đã!"</p>
+        
+        <p>Python Code Encoder Pro được tạo ra như một <span class="highlight">"lời đáp trả" nhẹ nhàng nhưng hiệu quả</span>. Khi code của bạn được mã hóa qua 7 phương thức khác nhau, những kẻ copy-paste sẽ phải thực sự hiểu code mới có thể sử dụng được.</p>
+        
+        <p>Đây không chỉ là công cụ bảo vệ code, mà còn là cách để <span class="highlight">"giáo dục" những người có thói quen lấy công sức của người khác</span> mà không biết tôn trọng.</p>
+        
+        <h2>Tính năng</h2>
+        
+        <p><span class="highlight">7 phương thức mã hóa:</span> Từ Base64 đơn giản đến Advanced multi-layer, đảm bảo code của bạn không thể bị "ăn cắp" một cách dễ dàng.</p>
+        
+        <p><span class="highlight">Xử lý nhanh chóng:</span> Mã hóa code trong tích tắc với giao diện thân thiện, hỗ trợ cả desktop và mobile.</p>
+        
+        <p><span class="highlight">Che giấu logic:</span> Code được obfuscate và compress, khiến việc đọc hiểu trở nên cực kỳ khó khăn cho kẻ trộm.</p>
+        
+        <p><span class="highlight">Responsive design:</span> Giao diện tối ưu cho cả desktop và mobile, với user-agent detection tự động.</p>
+        
+        <h2>Cách sử dụng</h2>
+        
+        <p><span class="highlight">Bước 1:</span> Paste code Python cần bảo vệ vào editor, hoặc upload file .py trực tiếp.</p>
+        
+        <p><span class="highlight">Bước 2:</span> Chọn phương thức mã hóa từ 7 tùy chọn có sẵn, từ đơn giản đến phức tạp nhất.</p>
+        
+        <p><span class="highlight">Bước 3:</span> Nhận code đã được mã hóa, vẫn chạy bình thường nhưng không ai đọc được.</p>
+        
+        <h2>Thông điệp đến những "code collector"</h2>
+        
+        <p class="quote" style="color: #ff6b6b;">"Nếu bạn thích copy code mà không credit, giờ đây hãy thử copy những dòng code này xem. Chúc bạn may mắn với việc decode! 😏"</p>
+        
+        <p>Đây là lời nhắn từ những developer đã quá mệt mỏi với việc thấy code của mình bị lấy mà không được ghi nhận.</p>
+        
+        <h2>Hiệu quả</h2>
+        
+        <p><span class="highlight">99%</span> code không thể đọc được sau khi mã hóa.</p>
+        
+        <p><span class="highlight">7</span> phương thức mã hóa khác nhau để lựa chọn.</p>
+        
+        <p><span class="highlight">∞</span> thời gian cần thiết để crack code đã được mã hóa đúng cách.</p>
+        
+        <p><span class="highlight">0</span> kẻ trộm code thành công cho đến nay.</p>
+        
+        <h2>Về tác giả</h2>
+        
+        <p>Được tạo ra với ❤️ bởi <a href="https://github.com/tanbaycu" target="_blank" class="author-link">tanbaycu</a>.</p>
+        
+        <p>Một developer đã quá mệt mỏi với việc thấy code của mình và của cộng đồng bị "mượn" mà không được credit.</p>
+        
+        <p style="font-style: italic; opacity: 0.7; margin-top: 3rem;">"Code is poetry, don't let others claim your verses."</p>
+        
+        <p style="text-align: center; margin-top: 4rem;">
+            <a href="https://encoder-python.vercel.app" class="cta-link">Bắt đầu bảo vệ code của bạn</a>
+        </p>
+    </div>
+
+    <script>
+        let isLightMode = false;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+        
+        function toggleTheme() {
+            isLightMode = !isLightMode;
+            document.documentElement.classList.toggle('light', isLightMode);
+            
+            const icon = document.getElementById('themeIcon');
+            if (isLightMode) {
+                icon.setAttribute('data-lucide', 'moon');
+            } else {
+                icon.setAttribute('data-lucide', 'sun');
+            }
+            
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
